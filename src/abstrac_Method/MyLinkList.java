@@ -24,7 +24,8 @@ public class MyLinkList<T> {
         myLinkList.addFrist(50);
         myLinkList.addFrist(60);
         myLinkList.print();*/
-        myLinkList.addBetween(100, 2);
+        myLinkList.addBetween(100, 0);
+        myLinkList.deleteNode(2);
         myLinkList.print();
     }
 
@@ -95,6 +96,32 @@ public class MyLinkList<T> {
                 return;
             }
             count++;
+            current = current.getNext();
+        }
+    }
+
+    public void deleteNode(int index) {
+        if (head == null) {
+            return;
+        }
+
+        if (index == 0) {
+
+            head = head.getNext();
+            return;
+        }
+
+        int count = 0;
+        Node current = head;
+        Node prev = null;
+        while (current != null) {
+            if (count == index) {
+
+                prev.setNext(current.getNext());
+                return;
+            }
+            count++;
+            prev = current;
             current = current.getNext();
         }
     }
