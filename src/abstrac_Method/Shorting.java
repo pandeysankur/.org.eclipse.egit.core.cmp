@@ -2,9 +2,9 @@ package abstrac_Method;
 
 public class Shorting {
     public static void main(String[] args) {
-        int myArray[]= insringsort(new int[]{9,8,2,4,4,21,1,2,1});
-        for (int i=0;i<myArray.length;i++){
-            System.out.println(myArray[i]);
+        int[] myArray = insringsort(new int[]{9,8,2,4,4,21,1,2,1});
+        for (int j : myArray) {
+            System.out.println(j);
         }
     }
 

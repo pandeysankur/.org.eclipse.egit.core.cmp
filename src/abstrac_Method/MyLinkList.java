@@ -24,13 +24,15 @@ public class MyLinkList<T> {
         myLinkList.addFrist(50);
         myLinkList.addFrist(60);
         myLinkList.print();*/
-        myLinkList.addBetween(100, 0);
-        myLinkList.deleteNode(2);
-        myLinkList.print();
+       // myLinkList.addBetween(100, 0);
+       // myLinkList.deleteNode(2);
+
+        myLinkList.printReverse( myLinkList.head);
+
     }
 
     public void add(T t) {
-        Node newNode = new Node();
+        Node<T> newNode = new Node<>();
         newNode.setT(t);
         newNode.setNext(null);
         if (head == null) {
@@ -124,6 +126,13 @@ public class MyLinkList<T> {
             prev = current;
             current = current.getNext();
         }
+    }
+    public void printReverse(Node<T> node) {
+        if (node == null) {
+            return;
+        }
+        printReverse(node.getNext());
+        System.out.println(node.getT());
     }
 
 
