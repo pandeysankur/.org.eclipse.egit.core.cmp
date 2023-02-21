@@ -24,10 +24,10 @@ public class MyLinkList<T> {
         myLinkList.addFrist(50);
         myLinkList.addFrist(60);
         myLinkList.print();*/
-       // myLinkList.addBetween(100, 0);
-       // myLinkList.deleteNode(2);
+        // myLinkList.addBetween(100, 0);
+        // myLinkList.deleteNode(2);
 
-        myLinkList.printReverse( myLinkList.head);
+        myLinkList.printReverse(myLinkList.head);
 
     }
 
@@ -127,6 +127,7 @@ public class MyLinkList<T> {
             current = current.getNext();
         }
     }
+
     public void printReverse(Node<T> node) {
         if (node == null) {
             return;
